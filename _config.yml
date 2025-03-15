@@ -5,6 +5,7 @@ minima:
   skin: dark
   nav_pages:
     - portfolio.md
+    - about.md
   social_links:
     - title: GitHub Profile
       icon: github
