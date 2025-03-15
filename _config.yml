@@ -5,7 +5,7 @@ minima:
   skin: dark
   nav_pages:
     - portfolio.md
-  social-links:
+  social_links:
     - title: GitHub Profile
       icon: github
       url: "https://github.com/bauer-alex-174"
