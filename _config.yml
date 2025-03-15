@@ -5,7 +5,7 @@ minima:
   skin: dark
   #date_format: "%b %-d, %Y"
   nav_pages:
-    - ""
+    - portfolio.md
   social-links:
     - title: GitHub Profile
       icon: github
