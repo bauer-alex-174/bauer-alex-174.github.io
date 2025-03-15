@@ -12,6 +12,6 @@ a passionate embedded systems engineer from Germany.
 📄 Know about my experiences
   * Bachelor of Engineering, Electrical Engineering and Information Technology at the Technische Hochschule Ulm, Germany
   * Working as an Embedded Linux Developer in Germany
-  * [Portfilio](https://bauer-alex-174.github.io/portfolio/)
+  * [Portfolio](https://bauer-alex-174.github.io/portfolio/)
 
 👨‍💻 All of my projects are available [here](https://github.com/bauer-alex-174?tab=repositories).
