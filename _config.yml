@@ -4,8 +4,8 @@ plugins:
 minima:
   skin: dark
   #date_format: "%b %-d, %Y"
-  #nav_pages:
-    #- about.md
+  nav_pages:
+    - ""
   social-links:
     - title: GitHub Profile
       icon: github
