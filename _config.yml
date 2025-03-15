@@ -3,5 +3,6 @@ plugins:
 - jekyll-remote-theme # add this line to the plugins list if you already have one
 
 # theme customization
-# title: [The title of your site]
+title: "Alex' Tech Lab"
 # description: [A short description of your site's purpose]
+show_downloads: false
