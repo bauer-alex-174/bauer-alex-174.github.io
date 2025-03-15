@@ -4,8 +4,8 @@ title: About
 permalink: /about/
 ---
 
-Hi 👋, I'm Alex  
-A passionate embedded systems engineer from Germany
+Hi 👋, I'm Alex,  
+a passionate embedded systems engineer from Germany.
 
 🔭 I’m currently working on my custom RP2040 Microcontroller Development Board.
 
