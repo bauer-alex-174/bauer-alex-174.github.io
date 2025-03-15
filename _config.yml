@@ -1,10 +1,17 @@
-remote_theme: pages-themes/hacker@v0.2.0
+remote_theme: "jekyll/minima@1e8a445"
 plugins:
 - jekyll-remote-theme # add this line to the plugins list if you already have one
+minima:
+  skin: dark
+  #date_format: "%b %-d, %Y"
+  #nav_pages:
+    #- about.md
+  social-links:
+    - title: GitHub Profile
+      icon: github
+      url: "https://github.com/bauer-alex-174"
 
-# theme customization
 title: "Alex' Tech Lab"
-# description: [A short description of your site's purpose]
-show_downloads: false
-github:
-  repository_url: https://github.com/bauer-alex-174
+author:
+  name: "Alexander Bauer"
+  email: ""
