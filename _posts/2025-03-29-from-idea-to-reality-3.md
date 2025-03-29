@@ -6,19 +6,19 @@ categories: rp2040
 
 ### Diving into the C SDK: The Heart of RP2040 Programming
 
-Now that we've designed and assembled our custom RP2040 microcontroller board, it's time to bring it to life with code. The cornerstone of RP2040 development is the Raspberry Pi Pico SDK (Software Development Kit). This comprehensive SDK, provided and meticulously maintained by Raspberry Pi, equips us with all the necessary tools to craft robust C and C++ applications for our microcontroller.
+Now that I've designed and assembled my custom RP2040 microcontroller board, it's time to bring it to life with code. The cornerstone of RP2040 development is the Raspberry Pi Pico SDK (Software Development Kit). This comprehensive SDK, provided and meticulously maintained by Raspberry Pi, equips someone with all the necessary tools to craft robust C and C++ applications for a rp2 microcontroller.
 
-To tailor the SDK for our custom board, a crucial step is creating a custom board header file. This involves forking the official `pico-sdk` repository on GitHub and adding our unique header. This file acts as a blueprint, defining the specific configuration of our board. It details:
+To tailor the SDK for my custom board, a crucial step is creating a custom board header file. This involves forking the official `pico-sdk` repository on GitHub and adding an unique header. This file acts as a blueprint, defining the specific configuration of my board. It details:
 
-* **GPIO Pin Assignments:** Specifies which GPIO pins are allocated for various interfaces (e.g., UART, SPI, I2C). This ensures our software interacts correctly with the hardware components connected to those pins.
-* **Flash Memory Size:** Defines the total flash memory capacity of our board, allowing the compiler to optimize code and data storage.
+* **GPIO Pin Assignments:** Specifies which GPIO pins are allocated for various interfaces (e.g., UART, SPI, I2C). This ensures the software interacts correctly with the hardware components connected to those pins.
+* **Flash Memory Size:** Defines the total flash memory capacity of the board, allowing the compiler to optimize code and data storage.
 * **Crystal Oscillator Details:** Specifies the frequency and characteristics of the crystal oscillator, which provides the timing reference for the microcontroller.
 
-Creating a custom header file ensures that the compiler understands the unique hardware configuration of our board, preventing conflicts and ensuring optimal performance.
+Creating a custom header file ensures that the compiler understands the unique hardware configuration of the board, preventing conflicts and ensuring optimal performance.
 
-### Crafting Your Application: C Code and CMake Integration
+### Crafting An Application: C Code and CMake Integration
 
-Developing a program for the RP2040 involves more than just writing C code. We also need to create a CMake file, which acts as a build configuration script. This file instructs the compiler on:
+Developing a program for the RP2040 involves more than just writing C code. I also need to create a CMake file, which acts as a build configuration script. This file instructs the compiler on:
 
 * **Source File Inclusion:** Specifies which C/C++ files should be included in the compilation process.
 * **Library Dependencies:** Lists the required libraries from the SDK, such as those for GPIO control, UART communication, or other peripherals.
@@ -26,9 +26,9 @@ Developing a program for the RP2040 involves more than just writing C code. We a
 
 CMake simplifies the build process, especially for larger projects with multiple source files and dependencies. If you're new to CMake, numerous online tutorials and resources can guide you through the process.
 
-### Flashing Your Board: From Binary to Reality
+### Flashing The Board: From Binary to Reality
 
-Once our code is compiled into a binary file, we need to flash it onto the RP2040's flash memory. There are several methods to achieve this:
+Once the code is compiled into a binary file, flash it onto the RP2040's flash memory. There are several methods to achieve this:
 
 * **USB Drag-and-Drop:** This beginner-friendly method involves placing the compiled binary file onto the RP2040's mass storage device, which appears when the board is connected in bootloader mode.
 * **Picotool:** A command-line utility that provides more advanced flashing capabilities. Picotool offers greater control and flexibility, allowing us to flash the board directly from the command line.
