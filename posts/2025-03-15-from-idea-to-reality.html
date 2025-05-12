@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Tech Lab</title>
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+</head>
+
+<body>
+    <header>
+        <h1>From Idea to Reality<br>Building a Custom RP2040 Microcontroller Board<br>Part 1: Conception and Initial Attempt</h1>
+    </header>
+    <nav>
+        <ul class="navbar">
+            <a href="/">Home</a>
+            <a href="/posts">Posts</a>
+            <a href="/projects">Projects</a>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Wiki</a>
+                <ul class="dropdown-content">
+                    <li><a href="/wiki/peripherals-&-io.html">Peripherals and I/O</a></li>
+                    <li><a href="/wiki/sensor-&-bus-systems.html">Sensor and Bus Systems</a></li>
+                    <li><a href="/wiki/power-&-control-systems.html">Power and Control Systems</a></li>
+                    <li><a href="/wiki/networking-&-communication.html">Networking and Communication</a></li>
+                    <li><a href="/wiki/programming-in-c-c++.html">Programming in C/C++</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Monitoring</a>
+                <ul class="dropdown-content">
+                    <li><a href="https://79.253.165.251/munin" target="_blank">Munin</a></li>
+                    <li><a href="https://79.253.165.251/mqtt">MQTT</a></li>
+                </ul>
+            </li>
+            <a href="/about">About</a>
+        </ul>
+    </nav>
+    <main>
+        <table>
+            <tr>
+                <td>
+                    <h3>The Spark of Curiosity: Diving Deeper into Embedded Systems</h3>
+                    <p>
+                        Fresh from earning my Bachelor of Engineering in Electrical Engineering and Information Technology,<br>
+                        I felt a strong desire to solidify my theoretical knowledge with practical experience.<br>
+                        While my academic journey had provided a solid foundation, I recognized a gap in my skillset: PCB design.<br><br>
+
+                        This wasn't just about filling a resume bullet point; it was about truly understanding<br>
+                        the intricate dance between hardware and software. I firmly believe that hands-on creation is the most<br>
+                        effective way to learn, and I was eager to put that belief to the test.<br><br>
+
+                        This personal project wasn't just about building a board; it was about building my understanding of embedded<br>
+                        systems from the ground up. I wanted to move beyond the pre-made development boards and delve into the<br>
+                        intricacies of custom hardware design.
+                    </p><br>
+
+                    <h3>Choosing the RP2040: A Microcontroller That Captured My Imagination</h3>
+                    <p>
+                        My previous microcontroller experience revolved around Arduino and SparkFun boards, staples of university courses.<br>
+                        However, the announcement of the Raspberry Pi Pico and its RP2040 microcontroller sparked a new wave of interest.<br>
+                        As a Raspberry Pi 3B owner, I was already familiar with the Raspberry Pi ecosystem. The RP2040's detailed datasheet,<br>
+                        its wide availability, and the option to purchase the chip separately offered a level of flexibility and control that<br>
+                        resonated with me.<br><br>
+                        
+                        The Raspberry Pi Hardware Design Guide served as an invaluable resource, providing the necessary technical<br>
+                        information to guide my project. The RP2040's dual-core architecture and programmable I/O capabilities presented an<br>
+                        exciting opportunity to explore more advanced embedded system concepts. I saw this project as a chance to push my<br>
+                        boundaries and learn by doing.
+                    </p><br>
+
+                    <h3>Navigating the Software Landscape: Embracing Cloud-Based Design</h3>
+                    <p>
+                        My choice of software was heavily influenced by the limitations of my Chromebook. I needed a robust design tool that could<br>
+                        operate seamlessly in a cloud-based environment. After extensive research, I discovered flux.ai, a cloud-native, AI-powered<br>
+                        schematic and PCB design platform. Its intuitive interface and powerful features made it an ideal choice for my project.<br><br>
+
+                        With flux.ai, I quickly set about designing the `Alyx Base V1`. I meticulously followed the Raspberry Pi Hardware Design Guide,<br>
+                        ensuring that my design adhered to the recommended specifications.<br>
+                        However, I decided to add a touch of modernity by incorporating a USB-C port, reflecting my desire to stay current with<br>
+                        emerging technologies.
+                    </p><br>
+
+                    <h3>Manufacturing and the Reality Check: JLCPCB and the 0402 Challenge</h3>
+                    <p>
+                        For manufacturing, I chose JLCPCB, a decision I haven't regretted. Their user-friendly platform, competitive pricing,<br>
+                        and reliable service made them an ideal partner for my project. I opted for self-assembly, eager to experience the<br>
+                        entire process from design to fabrication. I ordered the PCBs from JLCPCB and sourced the components from DigiKey,<br>
+                        ensuring that I had everything I needed to bring my design to life.<br><br>
+
+                        However, the reality of soldering 0402 components quickly set in. These tiny passive components, measuring a mere<br>
+                        1 mm x 0.5 mm, proved to be far more challenging to handle than I had anticipated. My skill level and available equipment<br>
+                        were simply not up to the task. Furthermore, I discovered that the USB-C footprint I had chosen was incompatible with the<br>
+                        selected component, a critical oversight that further compounded my difficulties. The `Alyx Base V1` ultimately proved to<br>
+                        be a learning experience in failure. Despite my best efforts, the board was not functional. Undeterred, I recognized this<br>
+                        setbackas an opportunity to learn and improve. I immediately began planning the `Alyx Base V2`, determined to apply the<br>
+                        lessons learned from my initial attempt and create a successful custom RP2040 board.<br><br>
+
+                        This first step, though fraught with challenges, was a crucial part of my journey into the world of custom hardware design.<br><br>
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </main>
+</body>
+
+<footer>
+    <p><a href="https://github.com/Alex-Tech-Lab" target="_blank">Alex Tech Lab</a> © 2025</p>
+</footer>
+
+</html>

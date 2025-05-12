@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Tech Lab</title>
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+</head>
+
+<body>
+    <header>
+        <h1>From Idea to Reality<br>Building a Custom RP2040 Microcontroller Board<br>Part 3: Programming the Board</h1>
+    </header>
+    <nav>
+        <ul class="navbar">
+            <a href="/">Home</a>
+            <a href="/posts">Posts</a>
+            <a href="/projects">Projects</a>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Wiki</a>
+                <ul class="dropdown-content">
+                    <li><a href="/wiki/peripherals-&-io.html">Peripherals and I/O</a></li>
+                    <li><a href="/wiki/sensor-&-bus-systems.html">Sensor and Bus Systems</a></li>
+                    <li><a href="/wiki/power-&-control-systems.html">Power and Control Systems</a></li>
+                    <li><a href="/wiki/networking-&-communication.html">Networking and Communication</a></li>
+                    <li><a href="/wiki/programming-in-c-c++.html">Programming in C/C++</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Monitoring</a>
+                <ul class="dropdown-content">
+                    <li><a href="https://79.253.165.251/munin" target="_blank">Munin</a></li>
+                    <li><a href="https://79.253.165.251/mqtt">MQTT</a></li>
+                </ul>
+            </li>
+            <a href="/about">About</a>
+        </ul>
+    </nav>
+    <main>
+        <table>
+            <tr>
+                <td>
+                    <h3>Diving into the C SDK: The Heart of RP2040 Programming</h3>
+                    <p>
+                        Now that I've designed and assembled my custom RP2040 microcontroller board, it's time to bring it to life with code.<br>
+                        The cornerstone of RP2040 development is the Raspberry Pi Pico SDK (Software Development Kit). This comprehensive SDK,<br>
+                        provided and meticulously maintained by Raspberry Pi, equips someone with all the necessary tools to craft robust C and C++<br>
+                        applications for a rp2 microcontroller.<br><br>
+
+                        To tailor the SDK for my custom board, a crucial step is creating a custom board header file. This involves forking<br>
+                        the official `pico-sdk` repository on GitHub and adding an unique header. This file acts as a blueprint, defining the<br>
+                        specific configuration of my board. It details:<br><br>
+
+                        <b> · GPIO Pin Assignments:</b> Specifies which GPIO pins are allocated for various interfaces (e.g., UART, SPI, I2C).<br>
+                        This ensures the software interacts correctly with the hardware components connected to those pins.<br><br>
+
+                        <b> · Flash Memory Size:</b> Defines the total flash memory capacity of the board, allowing the compiler to optimize code<br>
+                        and data storage.<br><br>
+
+                        <b> · Crystal Oscillator Details:</b> Specifies the frequency and characteristics of the crystal oscillator,<br>
+                        which provides the timing reference for the microcontroller.<br><br>
+
+                        Creating a custom header file ensures that the compiler understands the unique hardware configuration of the board,<br>
+                        preventing conflicts and ensuring optimal performance.
+                    </p><br>
+
+                    <h3>Crafting An Application: C Code and CMake Integration</h3>
+                    <p>
+                        Developing a program for the RP2040 involves more than just writing C code. I also need to create a CMake file,<br>
+                        which acts  as a build configuration script. This file instructs the compiler on:<br><br>
+
+                        <b> · File Inclusion:</b> Specifies which C/C++ files should be included in the compilation process.<br><br>
+
+                        <b> · Dependencies:</b> Lists the required libraries from the SDK, such as those for GPIO control, UART communication,<br>
+                        or other peripherals.<br><br>
+
+                        <b> · Build Settings:</b> Defines compiler flags and other build parameters.<br>
+
+                        CMake simplifies the build process, especially for larger projects with multiple source files and dependencies.<br>
+                        If you're new to CMake, numerous online tutorials and resources can guide you through the process.
+                    </p><br>
+
+                    <h3>Flashing The Board: From Binary to Reality</h3>
+                    <p>
+                        Once the code is compiled into a binary file, flash it onto the RP2040's flash memory. There are several methods to<br>
+                        achieve this:<br><br>
+
+                        <b> · USB Drag-and-Drop:</b> This beginner-friendly method involves placing the compiled binary file onto the RP2040's<br>
+                        mass storage device, which appears when the board is connected in bootloader mode.<br><br>
+
+                        <b> · Picotool:</b> A command-line utility that provides more advanced flashing capabilities. Picotool offers greater<br>
+                        control and flexibility,  allowing us to flash the board directly from the command line.<br>
+
+                        Initially, I opted for the simplicity of USB drag-and-drop. However, as I became more comfortable with the development<br>
+                        process, I transitioned to using Picotool. Its efficiency and command-line interface proved to be a more streamlined<br>
+                        approach for my workflow.<br><br>
+
+                        Using picotool allows for automation of the flashing process, and helps when using a continious integration or continious<br>
+                        deployment pipeline.<br><br>
+
+                        By mastering the C SDK, CMake, and the flashing process, we can unlock the full potential of our custom RP2040 microcontroller<br>
+                        board and bring our innovative ideas to life.<br><br>
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </main>
+</body>
+
+<footer>
+    <p><a href="https://github.com/Alex-Tech-Lab" target="_blank">Alex Tech Lab</a> © 2025</p>
+</footer>
+
+</html>

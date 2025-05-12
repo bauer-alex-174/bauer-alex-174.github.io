@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Tech Lab</title>
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+</head>
+
+<body>
+    <header>
+        <h1>From Idea to Reality<br>Building a Custom RP2040 Microcontroller Board<br>Part 2: First Working Prototype</h1>
+    </header>
+    <nav>
+        <ul class="navbar">
+            <a href="/">Home</a>
+            <a href="/posts">Posts</a>
+            <a href="/projects">Projects</a>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Wiki</a>
+                <ul class="dropdown-content">
+                    <li><a href="/wiki/peripherals-&-io.html">Peripherals and I/O</a></li>
+                    <li><a href="/wiki/sensor-&-bus-systems.html">Sensor and Bus Systems</a></li>
+                    <li><a href="/wiki/power-&-control-systems.html">Power and Control Systems</a></li>
+                    <li><a href="/wiki/networking-&-communication.html">Networking and Communication</a></li>
+                    <li><a href="/wiki/programming-in-c-c++.html">Programming in C/C++</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Monitoring</a>
+                <ul class="dropdown-content">
+                    <li><a href="https://79.253.165.251/munin" target="_blank">Munin</a></li>
+                    <li><a href="https://79.253.165.251/mqtt">MQTT</a></li>
+                </ul>
+            </li>
+            <a href="/about">About</a>
+        </ul>
+    </nav>
+    <main>
+        <table>
+            <tr>
+                <td>
+                    <h3>A Necessary Redesign: Lessons Learned from Alyx Base V1</h3>
+                    <p>
+                        The journey from concept to tangible hardware is rarely without its stumbles. My initial attempt, the `Alyx Base V1`,<br>
+                        highlighted several critical design flaws that necessitated a complete overhaul.<br><br>
+
+                        The original design's complexity, characterized by double-sided component placement and inefficient layer utilization,<br>
+                        proved to be a significant hurdle. Recognizing the need for a more streamlined approach, I embarked on a redesign,<br>
+                        aiming for simplicity and manufacturability.<br><br>
+
+                        In this redesign, I drew inspiration from the Raspberry Pi Zero/µHAT form factor, envisioning a compact and<br>
+                        versatile board. While the `Alyx Base V2` ultimately diverged from strict header compatibility, the underlying<br>
+                        principle of a small, efficiently designed board remained central to the new design.
+                    </p><br>
+
+                    <h3>Component Selection and the Shift to Assembly Services</h3>
+                    <p>
+                        One of the key lessons learned from the `Alyx Base V1` was the importance of accurate component footprints. To mitigate<br>
+                        the risk of future errors, I opted for a readily available, fully specified USB-C part from JLCPCB. This ensured compatibility<br>
+                        and simplified the assembly process. Additionally, while retaining the 0402 component size for its compactness, I made the<br>
+                        strategic decision to leverage JLCPCB's assembly services. This move not only streamlined production but also minimized<br>
+                        the potential for human error during the assembly phase.
+                    </p><br>
+
+                    <h3>The Persistent Challenge of Human Error</h3>
+                    <p>
+                        Despite meticulous planning and careful execution, the `Alyx Base V2` project was not immune to human error. Three critical<br>
+                        issues surfaced, highlighting the complexities of hardware development:<br><br>
+
+                        <b> · Flash Chip Misidentification:</b> A 16MB flash chip was incorrectly labeled and, crucially, had an incorrect<br>
+                        part number within flux.ai. This discrepancy led to the chip's omission during the JLCPCB assembly process, a costly oversight.<br><br>
+
+                        <b> · USB-C Port Footprint Inaccuracy:</b> The USB-C port footprint, despite careful review, remained incorrect within flux.ai.<br>
+                        While JLCPCB graciously agreed to a workaround by manually trimming the part, this highlighted the importance of precise<br>
+                        footprint verification.<br><br>
+
+                        <b> · LDO Voltage Discrepancy:</b> The LDO part number was also incorrect within flux.ai, resulting in the installation<br>
+                        of a 5V version instead of the required 3.3V. This voltage mismatch posed a significant risk to the RP2040 and<br>
+                        necessitated immediate rectification.<br>
+                    </p><br>
+
+                    <h3>Rectifying the Mistakes and Achieving Functionality</h3>
+                    <p>
+                        To address these errors, I procured the correct LDOs and flash chips from DigiKey. The LDO replacement was successfully completed<br>
+                        across all boards, restoring the correct operating voltage.<br><br>
+
+                        However, the flash chip replacement proved more challenging, with only two out of five boards successfully soldered. Fortunately,<br>
+                        the RP2040's ability to operate in RAM-only mode prevented the complete loss of the remaining boards.<br><br>
+
+                        With the correct voltages and partial flash functionality, the boards were recognized as drives by my PC. However, a new hurdle emerged:<br>
+                        programs would not execute after being dragged onto the boards. After extensive online research, I discovered the root cause:<br>
+                        the crystal oscillator's response time was too slow for the RP2040. The solution involved modifying the `Alyx Base V2`'s board header file to<br>
+                        increase the wait time, allowing the RP2040 to properly initialize.<br><br>
+
+                        Finally, after overcoming these challenges, I had a functional and programmable board. This milestone marked a significant step forward,<br>
+                        enabling me to begin developing and testing applications on my custom RP2040 board.<br><br>
+                        
+                        This process highlighted the iterative nature of hardware development and the importance of persistence in the face of setbacks.<br><br>
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </main>
+</body>
+
+<footer>
+    <p><a href="https://github.com/Alex-Tech-Lab" target="_blank">Alex Tech Lab</a> © 2025</p>
+</footer>
+
+</html>

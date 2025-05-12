@@ -1,0 +1,131 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2D2D30;
+    color: white;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #008080;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #B87333;
+    padding: 10px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Dropdown Styling */
+.navbar {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.navbar > a, .navbar > li {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #B87333;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 150px;
+    z-index: 1000;
+}
+
+.dropdown-content li a {
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content li a:hover {
+    text-decoration: underline;
+    background-color: #008080;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Main Section */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Link Styling */
+a {
+    color: #B87333;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* Table Styling */
+table {
+    width: auto;
+    border-collapse: collapse;
+    margin: 20px auto; /* Centers the table horizontally */
+    text-align: left;
+}
+
+table th, table td {
+    border: 1px solid #2D2D30;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #008080;
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background-color: #2D2D30;
+}
+
+table tr:nth-child(odd) {
+    background-color: #2D2D30;
+}
+
+footer {
+    background-color: #008080;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
