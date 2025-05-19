@@ -130,6 +130,12 @@ input[type="text"], input[type="search"], textarea {
     outline: none;
 }
 
+input::placeholder { color: #2d2d30; opacity: 1; }
+input::-webkit-input-placeholder { color: #2d2d30; opacity: 1; }
+input::-moz-placeholder { color: #2d2d30; opacity: 1; }
+input:-ms-input-placeholder { color: #2d2d30; opacity: 1; }
+input::-ms-input-placeholder { color: #2d2d30; opacity: 1; }
+
 /* Style for the button */
 button, input[type="submit"], input[type="button"] {
     background-color: #B87333;
