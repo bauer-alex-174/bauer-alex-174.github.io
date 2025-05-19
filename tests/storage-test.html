@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Tech Lab</title>
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+</head>
+
+<body>
+    <header>
+        <h1>Test of HTML5 localStorage and sessionStorage persistence</h1>
+    </header>
+
+    <nav>
+        <ul class="navbar">
+            <a href="/">Home</a>
+            <a href="https://localhost:8080">Port 8080</a>
+        </ul>
+    </nav>
+
+    <main>
+
+	    <p>Enter data in either box and click the button to store it. If you navigate to this page in a new window or tab, or quit and relaunch your browser, localStorage will remain and sessionStorage will disappear.</p>
+	    <p>Then try clearing your cache and reloading the page.</p>
+
+        <table>
+            <tr>
+                <td>
+                    <p>
+                        Local storage:<br />
+                        <input type="text" placeholder="nothing currently stored" size="30" id="local" />
+                        <input type="button" onclick="store_it('local', window.localStorage);" value="Store it" />
+                    </p>
+
+                    <p>
+                        Session storage:<br />
+                        <input type="text" placeholder="nothing currently stored" size="30" id="session" />
+                        <input type="button" onclick="store_it('session', window.sessionStorage);" value="Store it" />
+                    </p>
+                </td>
+            </tr>
+        </table>
+
+        <p id="local-warning"></p>
+	    <p id="session-warning"></p>
+
+    </main>
+
+	<script type="text/javascript" src="/tests/scripts/storage-test.js"></script>
+</body>
+
+<footer>
+    <p><a href="https://github.com/bauer-alex-174" target="_blank">Alex Bauer</a> © 2025</p>
+</footer>
+
+</html>
