@@ -56,10 +56,6 @@ function clear_all_storage() {
     document.getElementById("cookie").value = '';
 }
 
-function reload_page() {
-    window.location.reload();
-}
-
 // Initial population on load
 if (window.localStorage)
     retrieve_storage("local", localStorage);
