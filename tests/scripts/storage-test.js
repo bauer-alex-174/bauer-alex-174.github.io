@@ -13,7 +13,7 @@ function store_cookie() {
     var value = textBox.value;
     if (!value) {
         // Delete cookie by setting expiry to past
-        document.cookie = "theirValue=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        document.cookie = "username=alex; expires=" + new Date(Date.now() + 7*24*60*60*1000).toUTCString() + "; path=/; SameSite=Lax; Secure";
     } else {
         // Set cookie, expires in 7 days
         var d = new Date();
