@@ -54,10 +54,6 @@ function clear_all_storage() {
     document.getElementById("local").value = '';
     document.getElementById("session").value = '';
     document.getElementById("cookie").value = '';
-
-    // Show cache clearing info
-    document.getElementById("clear-cache-info").innerHTML =
-        "<br>Local/session storage and test cookie cleared.<br>To fully clear browser cache, use <kbd>Ctrl+Shift+R</kbd> or <kbd>Cmd+Shift+R</kbd> for a hard reload<br>(see <a href='https://developer.mozilla.org/docs/Tools/Keyboard_shortcuts#global_shortcuts' target='_blank'>MDN docs</a>).";
 }
 
 function reload_page() {
