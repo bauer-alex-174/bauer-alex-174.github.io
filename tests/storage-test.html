@@ -25,23 +25,28 @@
 	    <p>Enter data in either box and click the button to store it. If you navigate to this page in a new window or tab, or quit and relaunch your browser, localStorage will remain and sessionStorage will disappear.</p>
 	    <p>Then try clearing your cache and reloading the page.</p>
 
-        <table>
-            <tr>
-                <td>
-                    <p>
-                        Local storage:<br />
-                        <input type="text" placeholder="nothing currently stored" size="30" id="local" />
-                        <input type="button" onclick="store_it('local', window.localStorage);" value="Store it" />
-                    </p>
+        <p>
+            Local storage:<br />
+            <input type="text" placeholder="nothing currently stored" size="30" id="local" />
+            <input type="button" onclick="store_it('local', window.localStorage);" value="Store it" />
+        </p>
 
-                    <p>
-                        Session storage:<br />
-                        <input type="text" placeholder="nothing currently stored" size="30" id="session" />
-                        <input type="button" onclick="store_it('session', window.sessionStorage);" value="Store it" />
-                    </p>
-                </td>
-            </tr>
-        </table>
+        <p>
+            Session storage:<br />
+            <input type="text" placeholder="nothing currently stored" size="30" id="session" />
+            <input type="button" onclick="store_it('session', window.sessionStorage);" value="Store it" />
+        </p>
+
+        <p>
+    		Cookie storage:<br />
+            <input type="text" placeholder="nothing currently stored" size="30" id="cookie" />
+            <input type="button" onclick="store_cookie()" value="Store it" />
+        </p>
+
+        <p>
+            <input type="button" onclick="clear_all_storage()" value="Clear All Storage" />
+            <span id="clear-cache-info"></span>
+        </p>        
 
         <p id="local-warning"></p>
 	    <p id="session-warning"></p>
