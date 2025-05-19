@@ -57,7 +57,7 @@ function clear_all_storage() {
 
     // Show cache clearing info
     document.getElementById("clear-cache-info").innerHTML =
-        "Local/session storage and test cookie cleared. To fully clear browser cache, use <kbd>Ctrl+Shift+R</kbd> or <kbd>Cmd+Shift+R</kbd> for a hard reload (see <a href='https://developer.mozilla.org/docs/Tools/Keyboard_shortcuts#global_shortcuts' target='_blank'>MDN docs</a>).";
+        "<br>Local/session storage and test cookie cleared.<br>To fully clear browser cache, use <kbd>Ctrl+Shift+R</kbd> or <kbd>Cmd+Shift+R</kbd> for a hard reload<br>(see <a href='https://developer.mozilla.org/docs/Tools/Keyboard_shortcuts#global_shortcuts' target='_blank'>MDN docs</a>).";
 }
 
 // Initial population on load
