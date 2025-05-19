@@ -120,6 +120,32 @@ table tr:nth-child(odd) {
     background-color: #2D2D30;
 }
 
+/* Style for the input field */
+input[type="text"], input[type="search"], textarea {
+    background-color: #008080;
+    color: #fff;
+    border: 1px solid #008080; /* Optional: matches background or customize */
+    padding: 8px;
+    border-radius: 4px;
+    outline: none;
+}
+
+/* Style for the button */
+button, input[type="submit"], input[type="button"] {
+    background-color: #B87333;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover, input[type="submit"]:hover, input[type="button"]:hover {
+    background-color: #96582a; /* Slightly darker on hover */
+}
+
+/* Footer Styling */
 footer {
     background-color: #008080;
     color: white;
@@ -130,6 +156,7 @@ footer {
     bottom: 0;
 }
 
+/* Image Styling */
 .project-image {
   max-width: 200px;
   max-height: 200px;
