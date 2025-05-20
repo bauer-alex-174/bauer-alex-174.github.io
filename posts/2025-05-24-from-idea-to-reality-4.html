@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Tech Lab</title>
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+</head>
+
+<body>
+    <header>
+        <h1>From Idea to Reality<br>Building a Custom RP2040 Microcontroller Board<br>Part 4: Programming with Arduino</h1>
+    </header>
+    <nav>
+        <ul class="navbar">
+            <a href="/">Home</a>
+            <a href="/posts">Posts</a>
+            <a href="/projects">Projects</a>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Tests</a>
+                <ul class="dropdown-content">
+                    <li><a href="/tests/storage-test.html">Browser Storage Test</a></li>
+                </ul>
+            </li>
+            <a href="/about">About</a>
+        </ul>
+    </nav>
+    <main>
+        <table>
+            <tr>
+                <td>
+                    <h3>The Integration Process: Customization and Adaptation</h3>
+                    <p>
+                        The `arduino-pico` project provides an existing Arduino Core for RP2 microcontrollers.<br>
+                        However, to accommodate my custom board's unique specifications, a tailored integration process was necessary.<br><br>
+
+                        <b> · Repository Forking and Customization:</b><br>
+                            · I forked the `arduino-pico` repository on GitHub to create a personalized version.<br>
+                            · This allowed me to incorporate my custom `pico-sdk` and integrate my board's specific configurations.<br>
+                        <b> · Board Definition and Integration:</b><br>
+                            · Integrating my custom board required modifications at various points within the Arduino Core.<br>
+                            · This included defining the board's hardware characteristics, pin mappings, and other essential parameters.<br>
+                            · This step ensures that the Arduino environment accurately reflects the capabilities of my custom hardware.<br>
+                    </p><br>
+
+                    <h3>Leveraging `arduino-cli`: A Command-Line Approach</h3>
+                    <p>
+                        To interact with the Arduino ecosystem, I utilized `arduino-cli`, a command-line interface tool, installed on my Raspberry Pi.<br>
+
+                        <b> · Command-Line Efficiency:</b><br>
+                            · As a command-line enthusiast, I found `arduino-cli` to be a highly efficient and flexible tool.<br>
+                            · It provides access to all the functionalities of the Arduino IDE through a familiar command-line interface.<br>
+                        <b> · Streamlined Development Workflow:</b><br>
+                            · `arduino-cli` facilitates a streamlined development workflow, enabling tasks such as compiling, uploading,<br>
+                               and managing Arduino projects directly from the command line.<br>
+                            · This is especially valuable for automated build processes and continuous integration.<br>
+                        
+                        By seamlessly integrating my custom RP2040 board into the Arduino ecosystem and leveraging `arduino-cli`,<br>
+                        I have created a powerful and versatile development platform that combines the flexibility of custom hardware<br>
+                        with the accessibility of a widely supported software environment.<br><br>
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </main>
+</body>
+
+<footer>
+    <p><a href="https://github.com/bauer-alex-174" target="_blank">Alex Bauer</a> © 2025</p>
+</footer>
+
+</html>
